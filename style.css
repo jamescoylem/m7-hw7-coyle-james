@@ -71,7 +71,7 @@ main > section, main > article {
 }
 
 main > section.hero {
-  height: 300px;
+  height: 200px;
   background-image: url(https://picsum.photos/1920/1000);
   background-size: cover;
   background-position: center;
@@ -116,20 +116,20 @@ article p::first-letter {
   color: #15676b;
 }
 
-article p 
+article p
 span.tooltip {
-  color: var(--danger-color);
+  color: green;
   position: relative;
   cursor: pointer;
 }
 
-article p
+article p 
 span.tooltip:hover,
 span.tooltip:focus {
   text-decoration: underline;
 }
 
-article p
+article p 
 span.tooltip:hover > span,
 span.tooltip:focus > span {
   display: inline;
@@ -144,6 +144,25 @@ article p
 span.tooltip span::after {
   content: "";
 }
+
+article p
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  position: absolute;
+  z-index: 1;
+}
+
+article p
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+}
+
 
 main > article img {
   float: left;
